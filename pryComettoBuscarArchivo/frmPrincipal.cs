@@ -20,21 +20,39 @@ namespace pryComettoBuscarArchivo
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            StreamReader streamReader = new StreamReader("LIBRO.txt");
-            string auxiliar;
-            while (streamReader.EndOfStream == false)
+            if (txtBuscar.Text != "")
             {
-                auxiliar = streamReader.ReadLine();
-                if (auxiliar.Contains(txtBuscar.Text))
+                StreamReader streamReader = new StreamReader("LIBROS.txt");
+                string auxiliar;
+                while (streamReader.EndOfStream == false)
                 {
-                    lblDatos.Text = "ENCONTRADO " + auxiliar;
-                    break; //FRENO CORTA LA EJECUCION DEL PROCEDIMIENTO
+                    auxiliar = streamReader.ReadLine();
+                    if (auxiliar.Contains(txtBuscar.Text))
+                    {
+                        lblResultado.Text = "LIBRO ENCONTRADO:\n" + auxiliar;
+                        lblResultado.BackColor = Color.Green;
+                        streamReader.Close();
+                        break; //FRENO CORTA LA EJECUCION DEL PROCEDIMIENTO
+                    }
+                    else
+                    {
+                        lblResultado.Text = "LIBRO NO ENCONTRADO";
+                        lblResultado.BackColor = Color.Red;
+                    }
                 }
-                else
-                {
-                    lblDatos.Text = "NO ENCONTRADO";
-                }
+                streamReader.Close();
             }
+            else
+            {
+                MessageBox.Show("Error - Ingrese el nombre del libro a buscar","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            StreamWriter streamWriter = new StreamWriter("LIBROS.txt",true);
+            streamWriter.Write("CONSTITUCION DE LA NACION ARGENTINA\nCODIGO CIVIL Y COMERCIAL DE LA NACION\nLA VUELTA AL MUNDO EN 80 DIAS\nROBINSON CRUSOE");
+            streamWriter.Close();
         }
     }
 }

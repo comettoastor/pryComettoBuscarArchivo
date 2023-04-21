@@ -30,45 +30,67 @@
         {
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lblDatos = new System.Windows.Forms.Label();
+            this.lblResultado = new System.Windows.Forms.Label();
+            this.lblLibro = new System.Windows.Forms.Label();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(500, 117);
+            this.btnBuscar.Location = new System.Drawing.Point(159, 67);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 0;
-            this.btnBuscar.Text = "button1";
+            this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(500, 91);
+            this.txtBuscar.Location = new System.Drawing.Point(77, 41);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(157, 20);
             this.txtBuscar.TabIndex = 1;
             // 
-            // lblDatos
+            // lblResultado
             // 
-            this.lblDatos.AutoSize = true;
-            this.lblDatos.Location = new System.Drawing.Point(131, 109);
-            this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(78, 13);
-            this.lblDatos.TabIndex = 2;
-            this.lblDatos.Text = "No encontrado";
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Location = new System.Drawing.Point(256, 44);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(0, 13);
+            this.lblResultado.TabIndex = 2;
+            // 
+            // lblLibro
+            // 
+            this.lblLibro.AutoSize = true;
+            this.lblLibro.Location = new System.Drawing.Point(41, 44);
+            this.lblLibro.Name = "lblLibro";
+            this.lblLibro.Size = new System.Drawing.Size(30, 13);
+            this.lblLibro.TabIndex = 3;
+            this.lblLibro.Text = "Libro";
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(416, 196);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.TabIndex = 4;
+            this.btnGenerar.Text = "Generar txt";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblDatos);
+            this.ClientSize = new System.Drawing.Size(503, 231);
+            this.Controls.Add(this.btnGenerar);
+            this.Controls.Add(this.lblLibro);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnBuscar);
             this.Name = "frmPrincipal";
-            this.Text = "Form1";
+            this.Text = "Buscador de Libros";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,7 +100,9 @@
 
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label lblDatos;
+        private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Label lblLibro;
+        private System.Windows.Forms.Button btnGenerar;
     }
 }
 
