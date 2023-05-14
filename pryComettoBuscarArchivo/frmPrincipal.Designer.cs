@@ -71,7 +71,7 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(416, 196);
+            this.btnGenerar.Location = new System.Drawing.Point(396, 163);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(75, 23);
             this.btnGenerar.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 231);
+            this.ClientSize = new System.Drawing.Size(480, 194);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.lblLibro);
             this.Controls.Add(this.lblResultado);

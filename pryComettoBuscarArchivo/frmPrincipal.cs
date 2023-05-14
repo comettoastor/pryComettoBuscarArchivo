@@ -20,39 +20,51 @@ namespace pryComettoBuscarArchivo
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            //Checkeo si la textbox tiene un libro ingresado
             if (txtBuscar.Text != "")
             {
+                //Instancio el streamReader para leer el archivo de libros, creo una variable auxiliar
+                //que guarde la linea leida y otra libros que guarde los libros que encuentre
                 StreamReader streamReader = new StreamReader("LIBROS.txt");
                 string auxiliar;
+                string libros = "";
+                //Empiezo a leer el archivo con un mientras hasta que sea el end of file
                 while (streamReader.EndOfStream == false)
                 {
                     auxiliar = streamReader.ReadLine();
-                    if (auxiliar.Contains(txtBuscar.Text))
+                    //Pongo la linea y el libro ingresado en minusculas para no tener que distinguir mayus/minus
+                    if (auxiliar.ToLower().Contains(txtBuscar.Text.ToLower()))
                     {
-                        lblResultado.Text = "LIBRO ENCONTRADO:\n" + auxiliar;
-                        lblResultado.BackColor = Color.Green;
-                        streamReader.Close();
-                        break; //FRENO CORTA LA EJECUCION DEL PROCEDIMIENTO
-                    }
-                    else
-                    {
-                        lblResultado.Text = "LIBRO NO ENCONTRADO";
-                        lblResultado.BackColor = Color.Red;
+                        libros = libros + auxiliar + "\n";
+                        
                     }
                 }
                 streamReader.Close();
+                //Si encuentro libros que los muestre en un label con color verde y sino con el mensaje en rojo
+                if (libros != "")
+                {
+                    lblResultado.Text = libros;
+                    lblResultado.BackColor = Color.Green;
+                }
+                else
+                {
+                    lblResultado.Text = "LIBRO NO ENCONTRADO";
+                    lblResultado.BackColor = Color.Red;
+                }
             }
             else
             {
-                MessageBox.Show("Error - Ingrese el nombre del libro a buscar","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el nombre del libro a buscar","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            StreamWriter streamWriter = new StreamWriter("LIBROS.txt",true);
+            //Instancio un StreamWriter para crear el archivo de libros en la misma carpeta del ejecutable
+            StreamWriter streamWriter = new StreamWriter("LIBROS.txt");
             streamWriter.Write("CONSTITUCION DE LA NACION ARGENTINA\nCODIGO CIVIL Y COMERCIAL DE LA NACION\nLA VUELTA AL MUNDO EN 80 DIAS\nROBINSON CRUSOE");
             streamWriter.Close();
+            MessageBox.Show("Archivo de libros generado", "Archivo Generado", MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }
