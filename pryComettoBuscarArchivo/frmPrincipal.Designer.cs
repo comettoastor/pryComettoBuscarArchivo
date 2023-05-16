@@ -37,7 +37,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(159, 67);
+            this.btnBuscar.Location = new System.Drawing.Point(130, 64);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(77, 41);
+            this.txtBuscar.Location = new System.Drawing.Point(48, 38);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(157, 20);
             this.txtBuscar.TabIndex = 1;
@@ -55,7 +55,7 @@
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(256, 44);
+            this.lblResultado.Location = new System.Drawing.Point(227, 41);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(0, 13);
             this.lblResultado.TabIndex = 2;
@@ -63,7 +63,7 @@
             // lblLibro
             // 
             this.lblLibro.AutoSize = true;
-            this.lblLibro.Location = new System.Drawing.Point(41, 44);
+            this.lblLibro.Location = new System.Drawing.Point(12, 41);
             this.lblLibro.Name = "lblLibro";
             this.lblLibro.Size = new System.Drawing.Size(30, 13);
             this.lblLibro.TabIndex = 3;
