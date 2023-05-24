@@ -61,24 +61,25 @@ namespace pryComettoBuscarArchivo.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a CONSTITUCION DE LA NACION ARGENTINA
-        ///CODIGO CIVIL Y COMERCIAL DE LA NACION
-        ///LA VUELTA AL MUNDO EN 80 DIAS
-        ///ROBINSON CRUSOECONSTITUCION DE LA NACION ARGENTINA
-        ///CODIGO CIVIL Y COMERCIAL DE LA NACION
-        ///LA VUELTA AL MUNDO EN 80 DIAS
-        ///ROBINSON CRUSOECONSTITUCION DE LA NACION ARGENTINA
-        ///CODIGO CIVIL Y COMERCIAL DE LA NACION
-        ///LA VUELTA AL MUNDO EN 80 DIAS
-        ///ROBINSON CRUSOECONSTITUCION DE LA NACION ARGENTINA
-        ///CODIGO CIVIL Y COMERCIAL DE LA NACION
-        ///LA VUELTA AL MUNDO EN 80 DIAS
-        ///ROBINSON CRUSOECONSTITUCION DE LA NACION ARGENTINA
-        /// [resto de la cadena truncado]&quot;;.
+        ///   Busca una cadena traducida similar a 1,	EL SISTEMA OPERATIVO,	7,	1,	6
+        ///2,	LA TEORIA DE LA RELATIVIDAD,	6,	3,	6
+        ///3,	FUNCIONAMIENTO DEL CORAZON,	5,	5,	1
+        ///4,	LAS ABEJAS DEL CAMPO,	4,	7,	1
+        ///5,	EL DERECHO ROMANO,	3,	1,	5
+        ///6,	LAS TAREAS DEL HIGADO,	2,	3,	5
+        ///7,	EL LENGUAJE JAVASCRIPT,	1,	5,	4
+        ///8,	APRENDIENDO C EN 21 DIAS,	7,	7,	4
+        ///9,	LAS REDES LOCALES,	6,	2,	7
+        ///10,	DERIVADAS E INTEGRALES,	5,	4,	7
+        ///11,	PLATON Y EL PENSAMIENTO,	4,	6,	7
+        ///12,	LOS COHETES DE HELIO,	3,	2,	3
+        ///13,	EL SISTEMA PLANETARIO,	2,	4,	3
+        ///14,	LAS FUNCIONES DEL FISCAL,	1,	6,	2
+        ///15,	LA  [resto de la cadena truncado]&quot;;.
         /// </summary>
-        internal static string LIBROS {
+        internal static string LIBRO {
             get {
-                return ResourceManager.GetString("LIBROS", resourceCulture);
+                return ResourceManager.GetString("LIBRO", resourceCulture);
             }
         }
     }

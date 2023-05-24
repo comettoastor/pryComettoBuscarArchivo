@@ -25,7 +25,7 @@ namespace pryComettoBuscarArchivo
             {
                 //Instancio el streamReader para leer el archivo de libros, creo una variable auxiliar
                 //que guarde la linea leida y otra libros que guarde los libros que encuentre
-                StreamReader streamReader = new StreamReader("LIBROS.txt");
+                StreamReader streamReader = new StreamReader("LIBRO.txt");
                 string auxiliar;
                 string libros = "";
                 //Empiezo a leer el archivo con un mientras hasta que sea el end of file
@@ -35,7 +35,7 @@ namespace pryComettoBuscarArchivo
                     //Pongo la linea y el libro ingresado en minusculas para no tener que distinguir mayus/minus
                     if (auxiliar.ToLower().Contains(txtBuscar.Text.ToLower()))
                     {
-                        libros = libros + auxiliar + "\n";
+                        libros = libros + auxiliar.Split(',')[1] + "\n";
                         
                     }
                 }
@@ -56,15 +56,6 @@ namespace pryComettoBuscarArchivo
             {
                 MessageBox.Show("Ingrese el nombre del libro a buscar","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-        }
-
-        private void btnGenerar_Click(object sender, EventArgs e)
-        {
-            //Instancio un StreamWriter para crear el archivo de libros en la misma carpeta del ejecutable
-            StreamWriter streamWriter = new StreamWriter("LIBROS.txt");
-            streamWriter.Write("CONSTITUCION DE LA NACION ARGENTINA\nCODIGO CIVIL Y COMERCIAL DE LA NACION\nLA VUELTA AL MUNDO EN 80 DIAS\nROBINSON CRUSOE");
-            streamWriter.Close();
-            MessageBox.Show("Archivo de libros generado", "Archivo Generado", MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }

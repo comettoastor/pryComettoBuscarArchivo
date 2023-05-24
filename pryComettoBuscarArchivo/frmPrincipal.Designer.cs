@@ -32,7 +32,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblResultado = new System.Windows.Forms.Label();
             this.lblLibro = new System.Windows.Forms.Label();
-            this.btnGenerar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBuscar
@@ -69,22 +68,11 @@
             this.lblLibro.TabIndex = 3;
             this.lblLibro.Text = "Libro";
             // 
-            // btnGenerar
-            // 
-            this.btnGenerar.Location = new System.Drawing.Point(396, 163);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
-            this.btnGenerar.TabIndex = 4;
-            this.btnGenerar.Text = "Generar txt";
-            this.btnGenerar.UseVisualStyleBackColor = true;
-            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 194);
-            this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.lblLibro);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.txtBuscar);
@@ -102,7 +90,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Label lblLibro;
-        private System.Windows.Forms.Button btnGenerar;
     }
 }
 
