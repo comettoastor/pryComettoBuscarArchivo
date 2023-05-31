@@ -83,5 +83,8 @@
   <ItemGroup>
     <None Include="bin\Debug\LIBRO.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\libros.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

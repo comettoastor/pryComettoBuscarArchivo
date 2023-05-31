@@ -82,5 +82,15 @@ namespace pryComettoBuscarArchivo.Properties {
                 return ResourceManager.GetString("LIBRO", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon libros {
+            get {
+                object obj = ResourceManager.GetObject("libros", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
